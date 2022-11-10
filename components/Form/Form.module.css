@@ -1,0 +1,62 @@
+.field{
+    width:80%;
+    padding: 2rem;
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: none;
+}
+
+.legend{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.storage{
+    display: flex;
+}
+
+.section{
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.section label{
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.section input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 30px;
+    padding: 0.5rem;
+    border: 1px solid rgb(199, 198, 198);
+}
+
+
+ @media (max-width: 768px) { 
+    .form{
+        width: 100%;
+    }
+    .section{
+        width: 100%;
+        margin-bottom:1rem;
+    }
+
+    .section input{
+        width: 100%;
+    }
+
+    .storage{
+        flex-direction: column;
+    }
+ }
+
+ @media (min-width: 1024px) { 
+   
+    .section{
+        width: 20%;
+    }
+  }
