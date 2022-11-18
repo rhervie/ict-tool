@@ -190,10 +190,10 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
                 proTimYea: projectTimeline,
                 ChaNumSupUse:changeInSupportedUsers
             },
-            location: {
-                type: 'Point',
-                coordinates: [coordinates[0],coordinates[1]]
-            },
+            // location: {
+            //     type: 'Point',
+            //     coordinates: [coordinates[0],coordinates[1]]
+            // },
         
         }
         //MAKING POST REQUEST TO END POINT
