@@ -39,15 +39,11 @@ const serverSchema = new Schema ({
                     type:Number,
                     require:true,
                      trim: true,
-                     min:0,
-                     max:100,
                   },
                   estPerChaInUStDat:{
                     type:Number,
                     require:true,
                      trim: true,
-                     min:0,
-                     max:100,
                   },
                 serArcStoGigUse:  {
                     type:Number,
@@ -290,12 +286,19 @@ const serverSchema = new Schema ({
 }
    },
    location: {
-     type: String,
-    coordinates: []
-   },
+    type: {
+      type: String, // Don't do `{ location: { type: String } }`
+      enum: ['Point'], // 'location.type' must be 'Point'
+      required: true
+    },
+    coordinates: {
+      type: [Number],
+      required: true
+    }
+  }
     
 })
- serverSchema.index({ location: "2dsphere" });
+ serverSchema.index({ location: "Point" });
 
 const Server = models.Server || model('Server',serverSchema);
 export default Server;
