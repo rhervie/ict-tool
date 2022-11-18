@@ -6,8 +6,6 @@ import { useRouter } from 'next/router'
 
 const First = () => {
     const router =useRouter()
-    const[latitude, setLatitude]=useState(null)
-    const [longitude, setLongitude] = useState(null)
     const [nation ,setNation]= useState('');
     const [region, setRegion] = useState('')
     const [district, setDistrict] = useState('')

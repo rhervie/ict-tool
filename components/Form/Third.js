@@ -190,14 +190,14 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
                 proTimYea: projectTimeline,
                 ChaNumSupUse:changeInSupportedUsers
             },
-            // location: {
-            //     type: '2dsphere',
-            //     coordinates: [...coordinates]
-            // },
+            location: {
+                type: 'Point',
+                coordinates: [coordinates[0],coordinates[1]]
+            },
         
         }
         //MAKING POST REQUEST TO END POINT
-       
+       console.log(coordinates);
         const response = await fetch('/api/server',{
             method:'POST',
             headers:{
@@ -206,6 +206,7 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
             body:JSON.stringify(data)
         })
         console.log(response);
+        console.log(data);
 
         if(response.status === 201){
         clearFields()
