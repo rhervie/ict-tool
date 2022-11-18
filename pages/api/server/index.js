@@ -17,6 +17,7 @@ export default async function subjectHeader(req,res) {
     }else if (method=='POST'){
      const server = new Server (req.body)
      await server.save((err)=>{
+      
         if(!err) {
             res.status(201).json(server)
         } else{
