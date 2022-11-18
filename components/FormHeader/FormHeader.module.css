@@ -1,4 +1,16 @@
 .paragraph{
-    margin: 2rem;
+    margin: 2rem auto;
     text-align: center;
+    width: 70%;
+    background: -webkit-linear-gradient(113.49deg, #C6535B 39.71%, rgba(23, 54, 95, 0.79) 60.29%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+@media (max-width: 768px) { 
+    .paragraph{
+        width: 95%;
+        
+    }
 }
