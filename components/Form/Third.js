@@ -6,27 +6,27 @@ import { useRouter } from 'next/router'
 const Third = () => {
     
     const router = useRouter()
-    const[totalNumberDataCenterSwitchPorts, setTotalNumberDataCenterSwitchPorts]= useState('')
-    const[numberDataCenterSwitchPortsInUse, setNumberDataCenterSwitchPortsInUse] =useState('')
-    const[totalNumberEdgeEndUserDeviceSwitchPorts, setTotalNumberEdgeEndUserDeviceSwitchPorts] = useState('')
-    const[numberEdgeEndUserDeviceSwitchPortsInUse,setNumberEdgeEndUserDeviceSwitchPortsInUse] =useState('')
-   const[expectednumberSwitchPorts,setExpectednumberSwitchPorts] =useState('')
-   const[expectedNumberEdgeSwitchPorts,setExpectedNumberEdgeSwitchPorts]=useState('')
-    const[numberHandSets, setNumberHandSets]=useState('')
-    const[handsetsInUse, setHandsetsInUse] =useState('')
-    const[numberofPSTNTrunks,setNumberofPSTNTrunks ] =useState('')
-    const[numberOfWANLinks, setNumberOfWANLinks] =useState('')
-    const[numberWANLinksExceedingEightyPercent, setNumberWANLinksExceedingEightyPercent] = useState('')
-    const[maximumBTULoad ,setMaximumBTULoad] =useState('')
-    const[currentBTULoad, setCurrentBTULoad] =useState('')
-    const[numberServersDevicesInServerRoom, setNumberServersDevicesInServerRoom]=useState('')
-    const[estimatedFacilityPowerLimits,setEstimatedFacilityPowerLimits] =useState('')
-    const[facilityPowerConsumption,setFacilityPowerConsumption]=useState('')
-    const[estimatedNumberWANLinksExceedingEightyPercent,setEstimatedNumberWANLinksExceedingEightyPercent]=useState('')
-const[estimatedPercentChangeDevicesInServerRoom, setEstimatedPercentChangeDevicesInServerRoom]=useState('')
-const[estimatedPercentChangeElectricalRequirement,setEstimatedPercentChangeElectricalRequirement] =useState('')
-const[projectTimeline,setProjectTimeline] =useState('')
-const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
+    const[totalNumberDataCenterSwitchPorts, setTotalNumberDataCenterSwitchPorts]= useState(0)
+    const[numberDataCenterSwitchPortsInUse, setNumberDataCenterSwitchPortsInUse] =useState(0)
+    const[totalNumberEdgeEndUserDeviceSwitchPorts, setTotalNumberEdgeEndUserDeviceSwitchPorts] = useState(0)
+    const[numberEdgeEndUserDeviceSwitchPortsInUse,setNumberEdgeEndUserDeviceSwitchPortsInUse] =useState(0)
+   const[expectednumberSwitchPorts,setExpectednumberSwitchPorts] =useState(0)
+   const[expectedNumberEdgeSwitchPorts,setExpectedNumberEdgeSwitchPorts]=useState(0)
+    const[numberHandSets, setNumberHandSets]=useState(0)
+    const[handsetsInUse, setHandsetsInUse] =useState(0)
+    const[numberofPSTNTrunks,setNumberofPSTNTrunks ] =useState(0)
+    const[numberOfWANLinks, setNumberOfWANLinks] =useState(0)
+    const[numberWANLinksExceedingEightyPercent, setNumberWANLinksExceedingEightyPercent] = useState(0)
+    const[maximumBTULoad ,setMaximumBTULoad] =useState(0)
+    const[currentBTULoad, setCurrentBTULoad] =useState(0)
+    const[numberServersDevicesInServerRoom, setNumberServersDevicesInServerRoom]=useState(0)
+    const[estimatedFacilityPowerLimits,setEstimatedFacilityPowerLimits] =useState(0)
+    const[facilityPowerConsumption,setFacilityPowerConsumption]=useState(0)
+    const[estimatedNumberWANLinksExceedingEightyPercent,setEstimatedNumberWANLinksExceedingEightyPercent]=useState(0)
+const[estimatedPercentChangeDevicesInServerRoom, setEstimatedPercentChangeDevicesInServerRoom]=useState(0)
+const[estimatedPercentChangeElectricalRequirement,setEstimatedPercentChangeElectricalRequirement] =useState(0)
+const[projectTimeline,setProjectTimeline] =useState(0)
+const[changeInSupportedUsers,setChangeInSupportedUsers]=useState(0)
 
 
     useEffect(()=>{
@@ -60,27 +60,27 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
 
     //clear form data
     const clearFields=()=>{
-        setTotalNumberDataCenterSwitchPorts('')
-        setNumberDataCenterSwitchPortsInUse('')
-        setTotalNumberEdgeEndUserDeviceSwitchPorts('')
-        setNumberEdgeEndUserDeviceSwitchPortsInUse('')
-        setExpectednumberSwitchPorts('')
-        setExpectedNumberEdgeSwitchPorts('')
-        setNumberHandSets('')
-        setHandsetsInUse('')
-        setNumberofPSTNTrunks('')
-        setNumberOfWANLinks('')
-        setNumberWANLinksExceedingEightyPercent('')
-        setMaximumBTULoad('')
-        setCurrentBTULoad('')
-        setNumberServersDevicesInServerRoom('')
-        setEstimatedFacilityPowerLimits('')
-        setFacilityPowerConsumption('')
-        setEstimatedNumberWANLinksExceedingEightyPercent('')
-        setEstimatedPercentChangeDevicesInServerRoom('')
-        setEstimatedPercentChangeElectricalRequirement('')
-        setProjectTimeline('')
-        setChangeInSupportedUsers('')
+        setTotalNumberDataCenterSwitchPorts(0)
+        setNumberDataCenterSwitchPortsInUse(0)
+        setTotalNumberEdgeEndUserDeviceSwitchPorts(0)
+        setNumberEdgeEndUserDeviceSwitchPortsInUse(0)
+        setExpectednumberSwitchPorts(0)
+        setExpectedNumberEdgeSwitchPorts(0)
+        setNumberHandSets(0)
+        setHandsetsInUse(0)
+        setNumberofPSTNTrunks(0)
+        setNumberOfWANLinks(0)
+        setNumberWANLinksExceedingEightyPercent(0)
+        setMaximumBTULoad(0)
+        setCurrentBTULoad(0)
+        setNumberServersDevicesInServerRoom(0)
+        setEstimatedFacilityPowerLimits(0)
+        setFacilityPowerConsumption(0)
+        setEstimatedNumberWANLinksExceedingEightyPercent(0)
+        setEstimatedPercentChangeDevicesInServerRoom(0)
+        setEstimatedPercentChangeElectricalRequirement(0)
+        setProjectTimeline(0)
+        setChangeInSupportedUsers(0)
         
     }
 
@@ -110,7 +110,7 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
             projectTimeline,
             changeInSupportedUsers
         }
-        localStorage.setItem('thirdFormData', JSON.stringify(thirdFormData));
+        
         const firstData =JSON.parse(localStorage.getItem('firstFormData'));
         const secondData =JSON.parse(localStorage.getItem('secondFormData'));
         const coordinates =JSON.parse(localStorage.getItem('coordinates'))
@@ -190,11 +190,18 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
                 proTimYea: projectTimeline,
                 ChaNumSupUse:changeInSupportedUsers
             },
+
+            location: {
+                // type:'Point',
+                //  coordinates: [coordinates[0], coordinates[1]]
+                latitude:coordinates[0],
+                longitude:coordinates[1]
+              },
             
         
         }
         //MAKING POST REQUEST TO END POINT
-       console.log(coordinates);
+     
         const response = await fetch('/api/server',{
             method:'POST',
             headers:{
@@ -202,54 +209,82 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
             },
             body:JSON.stringify(data)
         })
-        console.log(response);
-        console.log(data);
+        
 
         if(response.status === 201){
         clearFields()
          localStorage.clear()
          router.push('/forms/first')
-      
+        }else{
+            console.log(response);
         }
+    }
+
+    const onPrevious=(e)=>{
+        e.preventDefault();
+         router.back() 
+         const thirdFormData ={
+            totalNumberDataCenterSwitchPorts,
+            numberDataCenterSwitchPortsInUse,
+            totalNumberEdgeEndUserDeviceSwitchPorts,
+            numberEdgeEndUserDeviceSwitchPortsInUse,
+            expectednumberSwitchPorts,
+            expectedNumberEdgeSwitchPorts,
+            maximumBTULoad,
+            currentBTULoad,
+            numberServersDevicesInServerRoom,
+            estimatedFacilityPowerLimits,
+            facilityPowerConsumption,
+            numberHandSets,
+            handsetsInUse,
+            numberofPSTNTrunks,
+            numberOfWANLinks,
+            numberWANLinksExceedingEightyPercent,
+            estimatedNumberWANLinksExceedingEightyPercent,
+            estimatedPercentChangeDevicesInServerRoom,
+            estimatedPercentChangeElectricalRequirement,
+            projectTimeline,
+            changeInSupportedUsers
+        }
+        localStorage.setItem('thirdFormData', JSON.stringify(thirdFormData));
     }
 
 
   return (
     <div>
-          <FormHeader />
-
+         
           <form className={classes.form}>
 
           <fieldset className={classes.field}>
                 <legend className={classes.legend}>Networking (LAN)</legend>
                     <div className={classes.section}>
                         <label htmlFor='numberSwitchPorts'>Total number of data center switch ports</label>
-                        <input type='text' id='numberSwitchPorts' value={totalNumberDataCenterSwitchPorts} onChange={(event)=>setTotalNumberDataCenterSwitchPorts(+event.target.value)} />
+                        <input type='number' id='numberSwitchPorts' value={totalNumberDataCenterSwitchPorts} onChange={(event)=>setTotalNumberDataCenterSwitchPorts(+event.target.value)} />
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='dataSwitchPorts'>Number of data center switch ports in use</label>
-                        <input type='text' id='dataSwitchPorts' value={numberDataCenterSwitchPortsInUse} onChange={(event)=>setNumberDataCenterSwitchPortsInUse(+event.target.value)}/>
+                        <input type='number' id='dataSwitchPorts' value={numberDataCenterSwitchPortsInUse} onChange={(event)=>setNumberDataCenterSwitchPortsInUse(+event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='end-userswitchports'>Total number of edge/end-user device switch ports</label>
-                        <input type='text' id='end-userswitchports' value={totalNumberEdgeEndUserDeviceSwitchPorts} onChange={(event)=>setTotalNumberEdgeEndUserDeviceSwitchPorts(+event.target.value)}/>
+                        <input type='number' id='end-userswitchports' value={totalNumberEdgeEndUserDeviceSwitchPorts} onChange={(event)=>setTotalNumberEdgeEndUserDeviceSwitchPorts(+event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='switchPortsInUse'>Number of edge/end user-device switch ports in use</label>
-                        <input type='text' id='switchPortsInUse' value={numberEdgeEndUserDeviceSwitchPortsInUse} onChange={(event)=>setNumberEdgeEndUserDeviceSwitchPortsInUse(+event.target.value)} />
+                        <input type='number' id='switchPortsInUse' value={numberEdgeEndUserDeviceSwitchPortsInUse} onChange={(event)=>setNumberEdgeEndUserDeviceSwitchPortsInUse(+event.target.value)} />
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='expectedswitchPorts'>Expected percentage change in number of switch ports needed</label>
-                        <input type='text' id='expectedswitchPorts' value={expectednumberSwitchPorts} onChange={(event)=>setExpectednumberSwitchPorts(+event.target.value)} />
+                        <input type='number' id='expectedswitchPorts' value={expectednumberSwitchPorts} onChange={(event)=>setExpectednumberSwitchPorts(+event.target.value)} />
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='expectededgeswitchports'>Expected percentage change in number of edge/end-user switch ports needed</label>
-                        <input type='text' id='expectededgeswitchports' value={expectedNumberEdgeSwitchPorts} onChange={(event)=>setExpectedNumberEdgeSwitchPorts(+event.target.value)} />
+                        <input type='number' id='expectededgeswitchports' value={expectedNumberEdgeSwitchPorts} onChange={(event)=>setExpectedNumberEdgeSwitchPorts(+event.target.value)} />
                     </div>
 
                 </fieldset>
@@ -258,17 +293,17 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
                     <legend className={classes.legend}>Networking (WAN)</legend>
                     <div className={classes.section}>
                         <label htmlFor='nation'>Total number of WAN links</label>
-                        <input type='text' id='nation' value={numberOfWANLinks} onChange={(event)=>setNumberOfWANLinks(+event.target.value)} />
+                        <input type='number' id='nation' value={numberOfWANLinks} onChange={(event)=>setNumberOfWANLinks(+event.target.value)} />
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='region'>Number of WAN links exceeding 80% utilization</label>
-                        <input type='text' id='region' value={numberWANLinksExceedingEightyPercent} onChange={(event)=>setNumberWANLinksExceedingEightyPercent(+event.target.value)}/>
+                        <input type='number' id='region' value={numberWANLinksExceedingEightyPercent} onChange={(event)=>setNumberWANLinksExceedingEightyPercent(+event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='region'>Estimated percent change in number of WAN links exceeding 80% utilization</label>
-                        <input type='text' id='region' value={estimatedNumberWANLinksExceedingEightyPercent} onChange={(event)=>setEstimatedNumberWANLinksExceedingEightyPercent(+event.target.value)}/>
+                        <input type='number' id='region' value={estimatedNumberWANLinksExceedingEightyPercent} onChange={(event)=>setEstimatedNumberWANLinksExceedingEightyPercent(+event.target.value)}/>
                     </div>
 
                 </fieldset>
@@ -278,17 +313,17 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
                     <legend className={classes.legend}>Telephony</legend>
                     <div className={classes.section}>
                         <label htmlFor='nation'>Total number of handsets</label>
-                        <input type='text' id='nation' value={numberHandSets} onChange={(event)=>setNumberHandSets(+event.target.value)} />
+                        <input type='number' id='nation' value={numberHandSets} onChange={(event)=>setNumberHandSets(+event.target.value)} />
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='region'>Number of handsets currently in use</label>
-                        <input type='text' id='region' value={handsetsInUse} onChange={(events)=>setHandsetsInUse(+events.target.value)} />
+                        <input type='number' id='region' value={handsetsInUse} onChange={(events)=>setHandsetsInUse(+events.target.value)} />
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='district'>Number of PSTN trunks currently provisioned (lines)</label>
-                        <input type='text' id='district' value={numberofPSTNTrunks} onChange={(event)=>setNumberofPSTNTrunks(+event.target.value)} />
+                        <input type='number' id='district' value={numberofPSTNTrunks} onChange={(event)=>setNumberofPSTNTrunks(+event.target.value)} />
                     </div>
 
                 </fieldset>
@@ -298,37 +333,37 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
                 <legend className={classes.legend}>Facility</legend>
                     <div className={classes.section}>
                         <label htmlFor='MaximumBTULoad'>Maximum BTU load</label>
-                        <input type='text' id='MaximumBTULoad' value={maximumBTULoad} onChange={(event)=>setMaximumBTULoad(+event.target.value)}/>
+                        <input type='number' id='MaximumBTULoad' value={maximumBTULoad} onChange={(event)=>setMaximumBTULoad(+event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='currentBTUload'>Current BTU load</label>
-                        <input type='text' id='currentBTUload' value={currentBTULoad} onChange={(event)=>setCurrentBTULoad(+event.target.value)} />
+                        <input type='number' id='currentBTUload' value={currentBTULoad} onChange={(event)=>setCurrentBTULoad(+event.target.value)} />
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='numberofServersDevicesinServerRm'>Number of servers and devices in your server room</label>
-                        <input type='text' id='numberofServersDevicesinServerRm' value={numberServersDevicesInServerRoom} onChange={(event)=>setNumberServersDevicesInServerRoom(event.target.value)}/>
+                        <input type='number' id='numberofServersDevicesinServerRm' value={numberServersDevicesInServerRoom} onChange={(event)=>setNumberServersDevicesInServerRoom(event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='estimatedFacilityPowerLimits'>Estimated facility power limits (kW)</label>
-                        <input type='text' id='facility' value={estimatedFacilityPowerLimits} onChange={(event)=>setEstimatedFacilityPowerLimits(+event.target.value)}/>
+                        <input type='number' id='facility' value={estimatedFacilityPowerLimits} onChange={(event)=>setEstimatedFacilityPowerLimits(+event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='facilityPowerConsumption'>Facility power consumption (kW)</label>
-                        <input type='text' id='facilityPowerConsumption' value={facilityPowerConsumption} onChange={(event)=>setFacilityPowerConsumption(+event.target.value)}/>
+                        <input type='number' id='facilityPowerConsumption' value={facilityPowerConsumption} onChange={(event)=>setFacilityPowerConsumption(+event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='estimatednumberInServerRoom'>Estimated percentage change to number of devices in the server room</label>
-                        <input type='text' id='estimatednumberInServerRoom' value={estimatedPercentChangeDevicesInServerRoom} onChange={(event)=>setEstimatedPercentChangeDevicesInServerRoom(+event.target.value)}/>
+                        <input type='number' id='estimatednumberInServerRoom' value={estimatedPercentChangeDevicesInServerRoom} onChange={(event)=>setEstimatedPercentChangeDevicesInServerRoom(+event.target.value)}/>
                     </div>
 
                     <div className={classes.section}>
                         <label htmlFor='estimatednumberInServerRoom'>Estimated percentage change in electrical requirements</label>
-                        <input type='text' id='estimatednumberInServerRoom' value={estimatedPercentChangeElectricalRequirement} onChange={(event)=>setEstimatedPercentChangeElectricalRequirement(+event.target.value)}/>
+                        <input type='number' id='estimatednumberInServerRoom' value={estimatedPercentChangeElectricalRequirement} onChange={(event)=>setEstimatedPercentChangeElectricalRequirement(+event.target.value)}/>
                     </div>
 
                 </fieldset>
@@ -337,22 +372,22 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
                     <legend className={classes.legend}>Capacity</legend>
                         <div className={classes.section}>
                             <label htmlFor='projectTimeline'>Projection Timeline(Years)</label>
-                            <input type='text' id='projectTimeline' value={projectTimeline} onChange={(event)=>setProjectTimeline(+event.target.value)} />
+                            <input type='number' id='projectTimeline' value={projectTimeline} onChange={(event)=>setProjectTimeline(+event.target.value)} />
                         </div>
 
                         <div className={classes.section}>
                             <label htmlFor='changeInSupportedUsers'>Percentage Change in Number of Support Users</label>
-                            <input type='text' id='changeInSupportedUsers' value={changeInSupportedUsers} onChange={(event)=>setChangeInSupportedUsers(+event.target.value)} />
+                            <input type='number' id='changeInSupportedUsers' value={changeInSupportedUsers} onChange={(event)=>setChangeInSupportedUsers(+event.target.value)} />
                         </div>
                     </fieldset>
 
                <div className={classes.submitContainer}>
-               <div> <button onClick={(e) => { e.preventDefault(); router.back() }}> Previous </button></div>
+               <div> <button onClick={onPrevious}> Previous </button></div>
                <div> <button  onClick={saveThirdFormData}> Submit </button></div>
                </div>
           </form>
     </div>
   )
-}
+  }
 
-export default Third
+export default Third;

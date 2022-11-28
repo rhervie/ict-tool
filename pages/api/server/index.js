@@ -8,12 +8,20 @@ export default async function subjectHeader(req,res) {
     console.log("Cloud DB Connected");
     // CURD
     if (method=='GET') {
-        await Server.find().
+       try {
+         await Server.find().
          then(getServers=>{
-            res.json(getServers)
+            res.status(200).json({data:getServers})
          }).catch (e=>{
             res.json(e)
          })
+        
+       } catch (error) {
+        res.status(500).json({
+            status: 500,
+            message: "Server error"
+        })
+       }
     }else if (method=='POST'){
      const server = new Server (req.body)
      await server.save((err)=>{

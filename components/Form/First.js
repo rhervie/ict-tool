@@ -10,27 +10,28 @@ const First = () => {
     const [region, setRegion] = useState('')
     const [district, setDistrict] = useState('')
     const [facility, setFacility] =useState('')
-    const [primaryStorageGigabytesInUse, setPrimaryStorageGigabytesInUse]= useState('')
-    const [primaryStorageFree, setPrimaryStorageFree] = useState('')
-    const [archivedStorageInUse, setArchivedStorageInUse] =useState('')
-    const [archivedStorageFree, setArchivedStorageFree] =useState('')
-    const [estimatedPercentinStrData,setEstimatedPercentinStrData] = useState('')
-    const [estimatedPercentinUnStrData, setEstimatedPercentinUnStrData] =useState('')
-    const[expectedPercentInArchivedStorageNeeds,setExpectedPercentInArchivedStorageNeeds] =useState('')
+    const [primaryStorageGigabytesInUse, setPrimaryStorageGigabytesInUse]= useState(0)
+    const [primaryStorageFree, setPrimaryStorageFree] = useState(0)
+    const [archivedStorageInUse, setArchivedStorageInUse] =useState(0)
+    const [archivedStorageFree, setArchivedStorageFree] =useState(0)
+    const [estimatedPercentinStrData,setEstimatedPercentinStrData] = useState(0)
+    const [estimatedPercentinUnStrData,
+        setEstimatedPercentinUnStrData]=useState(0)
+    const[expectedPercentInArchivedStorageNeeds,setExpectedPercentInArchivedStorageNeeds] =useState(0)
 
     useEffect(()=>{
         if (localStorage.getItem('firstFormData')) {
             const firstFormData = JSON.parse(localStorage.getItem('firstFormData'));
             setNation(firstFormData.nation)
             setRegion(firstFormData.region)
-            setDistrict(firstFormData.region)
+            setDistrict(firstFormData.district)
             setFacility(firstFormData.facility)
             setPrimaryStorageGigabytesInUse(firstFormData.primaryStorageGigabytesInUse)
             setPrimaryStorageFree(firstFormData.primaryStorageFree)
             setArchivedStorageFree(firstFormData.archivedStorageFree)
             setArchivedStorageInUse(firstFormData.archivedStorageInUse)
             setEstimatedPercentinStrData(firstFormData.estimatedPercentinStrData)
-            setEstimatedPercentinUnStrData(firstFormData.setEstimatedPercentinUnStrData)
+            setEstimatedPercentinUnStrData(firstFormData.estimatedPercentinUnStrData)
             setExpectedPercentInArchivedStorageNeeds(firstFormData.expectedPercentInArchivedStorageNeeds)      
             
         }
@@ -68,12 +69,12 @@ const First = () => {
             expectedPercentInArchivedStorageNeeds,
            
         }
-                // Save data to local storage
-                localStorage.setItem('firstFormData', JSON.stringify(firstFormData));
+        // Save data to local storage
+        localStorage.setItem('firstFormData', JSON.stringify(firstFormData));
 
-                // Redirect to the second form
-                router.push('/forms/second')
-        console.log(firstFormData);
+        // Redirect to the second form
+        router.push('/forms/second')
+       
        
 
     }
@@ -113,22 +114,30 @@ const First = () => {
                         <legend className={classes.legend}>Primary Storage</legend>
                         <div className={classes.section}>
                             <label htmlFor='storageInUse'>Gigabytes of storage in use</label>
-                            <input type='text' id='storageInUse' value={primaryStorageGigabytesInUse} onChange={(event)=>setPrimaryStorageGigabytesInUse(+event.target.value)} />
+                            <input type='number' id='storageInUse' value={primaryStorageGigabytesInUse} onChange={(event)=>setPrimaryStorageGigabytesInUse(+event.target.value)} />
                         </div>
 
                         <div className={classes.section}>
                             <label htmlFor='storageInUse'>Gigabytes of storage free</label>
-                            <input type='text' id='storageInUse' value={primaryStorageFree} onChange={(event)=>setPrimaryStorageFree(+event.target.value)} />
+                            <input type='number' id='storageInUse' value={primaryStorageFree} onChange={(event)=>setPrimaryStorageFree(+event.target.value)} />
                         </div>
                         
                         <div className={classes.section}>
                             <label htmlFor='estpercentinData'>Estimated Percentage change in structure data</label>
-                            <input type='text' id='estpercentinData' value={estimatedPercentinStrData} onChange={(event)=>setEstimatedPercentinStrData(+event.target.value)} />
+                            <input type='number' id='estpercentinData' value={estimatedPercentinStrData} onChange={(event)=>setEstimatedPercentinStrData(+event.target.value)} />
                         </div>
 
                         <div className={classes.section}>
-                            <label htmlFor='estpercentinData'>Estimated Percentage change in structure data</label>
-                            <input type='text' id='estpercentinData' value={estimatedPercentinUnStrData} onChange={(event)=>setEstimatedPercentinUnStrData(+event.target.value)} />
+                            <label htmlFor='estpercentinunStruData'>Estimated Percentage change in unstructure data</label>
+                            {/* <input type='number' id='estpercentinunStruData' 
+                            value={estimatedPercentinUnStrData} 
+                            onChange={(event)=>setEstimatedPercentinUnStrData(+event.target.value)} /> */}
+                            <input 
+                            type="number" 
+                            id="estpercentinunStruData"
+                            value={estimatedPercentinUnStrData}
+                            onChange={(event) => setEstimatedPercentinUnStrData(+event.target.value)}
+                           />
                         </div>
 
                     </fieldset>
@@ -137,17 +146,17 @@ const First = () => {
                         <legend className={classes.legend}>Archived Storage</legend>
                         <div className={classes.section}>
                             <label htmlFor='storageInUse'>Gigabytes of storage in use</label>
-                            <input type='text' id='storageInUse' value={archivedStorageInUse} onChange={(event)=>setArchivedStorageInUse(+event.target.value)}/>
+                            <input type='number' id='storageInUse' value={archivedStorageInUse} onChange={(event)=>setArchivedStorageInUse(+event.target.value)}/>
                         </div>
 
                         <div className={classes.section}>
                             <label htmlFor='storageInUse'>Gigabytes of storage free</label>
-                            <input type='text' id='storageInUse' value={archivedStorageFree} onChange={(event)=>setArchivedStorageFree(+event.target.value)}/>
+                            <input type='number' id='storageInUse' value={archivedStorageFree} onChange={(event)=>setArchivedStorageFree(+event.target.value)}/>
                         </div>
 
                         <div className={classes.section}>
                             <label htmlFor='expPercentchange'>Expected percentage in archived storage needs</label>
-                            <input type='text' id='expPercentchange' value={expectedPercentInArchivedStorageNeeds} onChange={(event)=>setExpectedPercentInArchivedStorageNeeds(+event.target.value)}/>
+                            <input type='number' id='expPercentchange' value={expectedPercentInArchivedStorageNeeds} onChange={(event)=>setExpectedPercentInArchivedStorageNeeds(+event.target.value)}/>
                         </div>
 
                     </fieldset>

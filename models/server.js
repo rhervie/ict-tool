@@ -290,8 +290,10 @@ const serverSchema = new Schema({
 }
    },
    location: {
-     type: String,
-    coordinates: []
+    //  type: String,
+    // coordinates: []
+    latitude:Number,
+    longitude:Number
    },
     
 })

@@ -39,7 +39,7 @@
     color: white;
     padding: 0.5rem 1rem;
     background: linear-gradient(113.49deg, #C6535B 6.99%, rgba(22, 54, 93, 0.79) 94.29%);
-    border-radius: 0.5px;
+    border-radius: 0.3rem;
 }
 
 .storage{
@@ -133,6 +133,7 @@
 
     .section1{
         width: 100%;
+        margin-bottom: 2rem;
     }
 
     .section input{
