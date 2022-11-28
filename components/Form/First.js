@@ -10,14 +10,14 @@ const First = () => {
     const [region, setRegion] = useState('')
     const [district, setDistrict] = useState('')
     const [facility, setFacility] =useState('')
-    const [primaryStorageGigabytesInUse, setPrimaryStorageGigabytesInUse]= useState(0)
-    const [primaryStorageFree, setPrimaryStorageFree] = useState(0)
-    const [archivedStorageInUse, setArchivedStorageInUse] =useState(0)
-    const [archivedStorageFree, setArchivedStorageFree] =useState(0)
-    const [estimatedPercentinStrData,setEstimatedPercentinStrData] = useState(0)
+    const [primaryStorageGigabytesInUse, setPrimaryStorageGigabytesInUse]= useState('')
+    const [primaryStorageFree, setPrimaryStorageFree] = useState('')
+    const [archivedStorageInUse, setArchivedStorageInUse] =useState('')
+    const [archivedStorageFree, setArchivedStorageFree] =useState('')
+    const [estimatedPercentinStrData,setEstimatedPercentinStrData] = useState('')
     const [estimatedPercentinUnStrData,
-        setEstimatedPercentinUnStrData]=useState(0)
-    const[expectedPercentInArchivedStorageNeeds,setExpectedPercentInArchivedStorageNeeds] =useState(0)
+        setEstimatedPercentinUnStrData]=useState('')
+    const[expectedPercentInArchivedStorageNeeds,setExpectedPercentInArchivedStorageNeeds] =useState('')
 
     useEffect(()=>{
         if (localStorage.getItem('firstFormData')) {

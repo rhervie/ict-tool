@@ -110,7 +110,7 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState(0)
             projectTimeline,
             changeInSupportedUsers
         }
-        
+        localStorage.setItem('thirdFormData', JSON.stringify(thirdFormData));
         const firstData =JSON.parse(localStorage.getItem('firstFormData'));
         const secondData =JSON.parse(localStorage.getItem('secondFormData'));
         const coordinates =JSON.parse(localStorage.getItem('coordinates'))

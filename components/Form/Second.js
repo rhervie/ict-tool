@@ -7,19 +7,19 @@ import { useRouter } from 'next/router'
 const Second = () => {
     const router = useRouter()
 
-    const [cpuPercentDevotedUserActivities, setCpuPercentDevotedUserActivities] = useState(0)
-    const [cpuPercentDevotedSystemsActivities, setCpuPercentDevotedSystemsActivities] = useState(0)
-    const [cpuPercentDevotedWaitIO, setCpuPercentDevotedWaitIO] = useState(0)
-    const [totalPercentageCPUUusage, setTotalPercentageCPUUusage] = useState(0)
-    const [percentMemoryFree, setPercentMemoryFree] = useState(0)
-    const [percentSwapFree, setpercentSwapFree] = useState(0)
-    const [totalDiskSize, setTotalDiskSize] = useState(0)
-    const [diskUsage, setDiskUsage] = useState(0)
-    const [primaryStorageMaxCap, setPrimaryStorageMaxCap] = useState(0)
-    const [primaryArchivedMaxCap, setPrimaryArchivedMaxCap] = useState(0)
-    const [usersSupported, setUsersSupported] = useState(0)
-    const [numberOfServers, setNumberOfServers] = useState(0)
-    const [remoteBackupServers, setRemoteBackupServers] = useState(0)
+    const [cpuPercentDevotedUserActivities, setCpuPercentDevotedUserActivities] = useState('')
+    const [cpuPercentDevotedSystemsActivities, setCpuPercentDevotedSystemsActivities] = useState('')
+    const [cpuPercentDevotedWaitIO, setCpuPercentDevotedWaitIO] = useState('')
+    const [totalPercentageCPUUusage, setTotalPercentageCPUUusage] = useState('')
+    const [percentMemoryFree, setPercentMemoryFree] = useState('')
+    const [percentSwapFree, setpercentSwapFree] = useState('')
+    const [totalDiskSize, setTotalDiskSize] = useState('')
+    const [diskUsage, setDiskUsage] = useState('')
+    const [primaryStorageMaxCap, setPrimaryStorageMaxCap] = useState('')
+    const [primaryArchivedMaxCap, setPrimaryArchivedMaxCap] = useState('')
+    const [usersSupported, setUsersSupported] = useState('')
+    const [numberOfServers, setNumberOfServers] = useState('')
+    const [remoteBackupServers, setRemoteBackupServers] = useState('')
 
 
     useEffect(()=>{
