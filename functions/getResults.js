@@ -5,6 +5,7 @@ const Result=(array)=>{
   const FData=[];
     array.forEach(data => {
         let Final={
+            _id:data._id,
     country:data.country,
     primary:(calcFunc.HiddenC39(data)),
     archived:(calcFunc.HiddenC40(data)),
