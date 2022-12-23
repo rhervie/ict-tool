@@ -1,6 +1,6 @@
-import connectDB from "../../utils/connectDB";
-import Server from "../../models/server";
-import getResults from "../../functions/getResults";
+import connectDB from "../../../utils/connectDB";
+import Server from "../../../models/server";
+import getResults from "../../../functions/getResults";
 
 export default async function funcHeader(req,res) {
     const method = req.method;
