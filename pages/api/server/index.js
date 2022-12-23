@@ -29,6 +29,7 @@ export default async function subjectHeader(req,res) {
         if(!err) {
             res.status(201).json(server)
         } else{
+            console.log(err.message)
             res.status(406).send(err.message)
         }
         

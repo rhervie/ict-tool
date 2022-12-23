@@ -1,0 +1,110 @@
+import calcFunc from "./calcFunc";
+import messagesTable from "./messagesTable";
+
+const Primary = (value)=>{
+    if(value > 80){
+        return {primaryMessage:messagesTable.baseMessage,primaryValue:value};
+    }else{
+        return {primaryMessage:messagesTable.primaryMessage,primaryValue:value};
+    }
+}
+
+const Archived=(value)=> {
+ if(value>10){
+    return {archivedMessage:messagesTable.archivedMessage,archivedValue:value}
+ }else{
+    return {archivedMessage:messagesTable.baseMessage,archivedValue:value}
+ }
+}
+
+const CPU=(value)=>{
+    if(value>10){
+        return {cPUMessage:messagesTable.cpuMessage,cPUValue:value}
+    }
+    else{
+        return {cPUMessage:messagesTable.baseMessage,cPUValue:value}
+    }
+}
+const Disk=(value)=>{
+    if(value>10){
+        return {diskMessage:messagesTable.diskMessage,diskValue:value}
+    }
+    else{
+        return {diskMessage:messagesTable.baseMessage,diskValue:value}
+    }
+}
+
+const memory = (data)=>{
+    return calcFunc.HiddenC41(data)
+}
+const Handsets=(value)=>{
+    if(value>10){
+        return {handsetsMessage:messagesTable.handsetsMessage,handsetsValue:value}
+    }
+    else{
+        return {handsetsMessage:messagesTable.baseMessage,handsetsValue:value}
+    }
+}
+const Lines=(value)=>{
+    if(value>10){
+        return {linesMessage:messagesTable.linesMessage,linesValue:value}
+    }
+    else{
+        return {linesMessage:messagesTable.baseMessage,linesValue:value}
+    }
+}
+const LANDataCenterSwitchPorts=(value)=>{
+    if(value>10){
+        return {lANDataCenterSwitchPortsMessage:messagesTable.lANDataCenterSwitchPortsMessage,lANDataCenterSwitchPortsValue:value}
+    }
+    else{
+        return {lANDataCenterSwitchPortsMessage:messagesTable.baseMessage,lANDataCenterSwitchPortsValue:value}
+    }
+}
+const LANEndUserOrDeviceSwitchPorts=(value)=>{
+    if(value>10){
+        return {lANEndUserOrDeviceSwitchPortsMessage:messagesTable.lANEndUserOrDeviceSwitchPortsMessage,lANEndUserOrDeviceSwitchPortsValue:value}
+    }
+    else{
+        return {lANEndUserOrDeviceSwitchPortsMessage:messagesTable.baseMessage,lANEndUserOrDeviceSwitchPortsValue:value}
+    }
+}
+const WANLinksExceeding80PercUtilization=(value)=>{
+    if(value>10){
+        return {wANLinksExceeding80PercUtilizationMessage:messagesTable.wANLinksExceeding80PercUtilizationMessage,wANLinksExceeding80PercUtilizationValue:value}
+    }
+    else{
+        return {wANLinksExceeding80PercUtilizationMessage:messagesTable.baseMessage,wANLinksExceeding80PercUtilizationValue:value}
+    }
+}
+const Cooling=(value)=>{
+    if(value>10){
+        return {coolingMessage:messagesTable.coolingMessage,coolingValue:value}
+    }
+    else{
+        return {coolingMessage:messagesTable.baseMessage,coolingValue:value}
+    }
+}
+const ElectricalCapacity=(value)=>{
+    if(value>10){
+        return {electricalCapacityMessage:messagesTable.electricalCapacityMessage,ElectricalCapacityValue:value}
+    }
+    else{
+        return {electricalCapacityMessage:messagesTable.baseMessage,ElectricalCapacityValue:value}
+    }
+}
+
+export default{
+    Archived,
+    memory,
+    Cooling,
+    CPU,
+    Disk,
+    ElectricalCapacity,
+    Handsets,
+    Lines,
+    LANDataCenterSwitchPorts,
+    LANEndUserOrDeviceSwitchPorts,
+    WANLinksExceeding80PercUtilization,
+    Primary,
+}

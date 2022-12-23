@@ -22,9 +22,10 @@ const serverSchema = new Schema({
             trim: true,
         },
     },
+
     server: {
         storage: {
-            serPriStoGigUse: {
+            serPriStoGigUse: { // Gigabytes of storage in use
                 type: Number,
                 require: true,
                 trim: true,
@@ -39,15 +40,11 @@ const serverSchema = new Schema({
                     type:Number,
                     require:true,
                      trim: true,
-                     min:0,
-                     max:100,
                   },
                   estPerChaInUStDat:{
                     type:Number,
                     require:true,
                      trim: true,
-                     min:0,
-                     max:100,
                   },
                 serArcStoGigUse:  {
                     type:Number,
@@ -63,8 +60,6 @@ const serverSchema = new Schema({
                         type:Number,
                         require:true,
                          trim: true,
-                         min:0,
-                         max:100,
                       }, 
     } ,
     cpu:{
@@ -72,35 +67,26 @@ const serverSchema = new Schema({
     type:Number,
     trim:true,
     require : true,
-    min:0,
-    max:100,
     },
     serCpuPerSysAct : {
         type: Number,
         require:true,
          trim: true,
-         min:0,
-         max:100,
     },
     serCpuDevWIO : {
         type: Number,
         require:true,
          trim: true,
-         min:0,
-         max:100,
     },
     serCpuTot : {
         type: Number,
         require:false,
          trim: true,
-         min:0,
-         max:100,
     },
     },
     memory: {
         serMemfreePer : {
             type: Number,
-            require:true,
              trim: true,
              min:0,
              max:100,
@@ -295,7 +281,6 @@ const serverSchema = new Schema({
     latitude:Number,
     longitude:Number
    },
-    
 })
  serverSchema.index({ location: "Point" });
 
