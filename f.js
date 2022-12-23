@@ -1,0 +1,5 @@
+=IF(OR('Server Assessment'!D15=0,'Server Assessment'!D16=0,'Server Assessment'!D17=0),('Server Assessment'!D18+(('Servers Expectations'!E10/100)*'Server Assessment'!F14*Hidden!J26)),
+('Server Assessment'!D15+'Server Assessment'!D16+'Server Assessment'!D17+(('Servers Expectations'!E10/100)*Hidden!J23*'Server Assessment'!F14)+(('Servers Expectations'!E10/100)*Hidden!J24*'Server Assessment'!F14)+(('Servers Expectations'!E10/100)*Hidden!J25*'Server Assessment'!F14)))
+
+
+=IF(OR('Server Assessment'!D15=0,'Server Assessment'!D16=0,'Server Assessment'!D17=0),('Server Assessment'!D18+(('Servers Expectations'!E10/100)*'Server Assessment'!F14*Hidden!J26)),('Server Assessment'!D15+'Server Assessment'!D16+'Server Assessment'!D17+(('Servers Expectations'!E10/100)*Hidden!J23*'Server Assessment'!F14)+(('Servers Expectations'!E10/100)*Hidden!J24*'Server Assessment'!F14)+(('Servers Expectations'!E10/100)*Hidden!J25*'Server Assessment'!F14)))
