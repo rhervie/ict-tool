@@ -1,0 +1,47 @@
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 90%;
+   margin: 2rem auto;
+}
+
+.table th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: blue;
+    padding: 0.5rem;
+}
+
+.table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+.subHeader{
+    color: orange;
+    text-align: center;
+    font-weight: 700;
+}
+.subsubHeader{
+    color: orange;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flexbox td{
+    border: none;
+}
+/* <td>0%</td>
+<td>0%</td> */
+
+/* <td>Memory in use</td>
+     <td>Swap in use</td> */
+
+     .facility{
+        margin-left: 3rem;
+    }

@@ -1,6 +1,7 @@
 import Server from "../../../models/server";
 import connectDB from "../../../utils/connectDB";
 import finalobject from "../../../functions/finalobject";
+
 export default async function subjectHeader(req,res) {
     const {results_id} =  req.query;
     console.log("in");

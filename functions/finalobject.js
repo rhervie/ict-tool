@@ -2,7 +2,7 @@ import calcFunc from "./calcFunc";
 
 const FinalObject=(find)=>{
     let Final={
-        _id:find._id,
+    _id:find._id,
     country:find.country,
     primary:(calcFunc.HiddenC39(find)),
     archived:(calcFunc.HiddenC40(find)),

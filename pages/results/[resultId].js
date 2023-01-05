@@ -1,54 +1,29 @@
-import React from 'react'
-import useResult from '../../Hooks/useResult'
+import {useEffect, useState} from 'react'
 import { useRouter } from 'next/router'
+import Results from '../../components/Result/Results'
 
 
 const Result = () => {
-    // const router = useRouter()
-    // const {resultId} = router.query
+    const router = useRouter()
+    const [result,setResultData] = useState(null)
+    const {resultId} = router.query
     // const {result} = useResult(resultId)
-    // console.log(result && result);
-  return (
-    <div>
-        <table>
-    <thead>
-        <tr>
-            <th >Infrastructure Component</th>
-            <th>Action Required(Within 0 Year[s])</th>
-            <th>Projected</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="3">Storage</td>
-        </tr>
-        <tr>
-        <td>Primary</td>
-         <td>description</td>
-         <td>value</td>
-        </tr>
-        <tr>
-        <td>Archived</td>
-         <td>description</td>
-         <td>value</td>
-        </tr>
 
-        <tr>
-            <td colspan="3">Servers</td>
-        </tr>
-        <tr>
-        <td>CPU</td>
-         <td>description</td>
-         <td>value</td>
-        </tr>
-        <tr>
-        <td>Memory</td>
-         <td>description</td>
-         <td>value</td>
-        </tr>
-    </tbody>
-</table>
-    </div>
+    useEffect(() => {
+        const fetchData = async () =>{
+            const resultData = await fetch(`/api/results/${resultId}`)
+            const result = await resultData.json();
+            setResultData(result && result)
+        }
+
+        fetchData()
+       
+    }, [resultId]);
+   
+  return (
+   <div>
+    <Results result={result}/>
+   </div>
   )
 }
 
