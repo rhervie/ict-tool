@@ -1,8 +1,14 @@
 .ResultDetails{
-    width: 80%;
+    width: 60%;
     margin: 5rem auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 3rem;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+    /* gap: 3rem; */
     
+}
+
+@media (width <= 30rem){
+   .ResultDetails{
+    width: 90%;
+   }
 }

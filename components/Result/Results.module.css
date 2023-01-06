@@ -1,36 +1,41 @@
 .table{
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.377);
     border-collapse: collapse;
     width: 90%;
    margin: 2rem auto;
+   color:rgba(43, 44, 44, 0.76);
 }
 
 .table th{
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.377);
     border-collapse: collapse;
-    color: blue;
+    color: rgb(23, 54, 95);
     padding: 0.5rem;
 }
 
 .table td{
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    font-weight: 200;
     border-collapse: collapse;
     padding: 0.5rem;
 }
 
 .subHeader{
-    color: orange;
+    
+    color: rgb(23, 54, 95);
     text-align: center;
     font-weight: 700;
 }
 .subsubHeader{
-    color: orange;
+    /* color: #C6535B; */
+    color: rgb(23, 54, 95);
 }
 
 .flexbox{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    color: rgb(23, 54, 95);
 }
 
 .flexbox td{
@@ -43,5 +48,35 @@
      <td>Swap in use</td> */
 
      .facility{
-        margin-left: 3rem;
+        display: grid;
+       grid-template-columns: repeat(2,1fr);
+       gap:1rem;
+        padding: 0.5rem;
+        margin: 1.5rem auto;
+       background: rgba(23, 54, 95, 0.123);
+       width: fit-content;
+       border-radius: 0.3rem;
     }
+.facility p{
+    color: rgb(2, 28, 65);
+}
+
+.facility p > span{margin-left: 0.5rem;
+    font-weight: 100;
+    color: #333;
+}
+
+/* KBQ STYLES */
+
+.percentage{
+  color: #C6535B;
+}
+
+@media (width <= 30rem){
+    .table tbody tr td:nth-child(2):not(td[colSpan="2"]){
+        display: none;
+    }
+    .table thead tr th:nth-child(2){
+        display: none;
+    }
+}

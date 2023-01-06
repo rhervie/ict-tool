@@ -32,6 +32,7 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
     useEffect(()=>{
         if (localStorage.getItem('thirdFormData')) {
             const thirdFormData = JSON.parse(localStorage.getItem('thirdFormData'));
+            console.log(thirdFormData);
 
             setTotalNumberDataCenterSwitchPorts(thirdFormData.totalNumberDataCenterSwitchPorts)
             setNumberDataCenterSwitchPortsInUse(thirdFormData.numberDataCenterSwitchPortsInUse)
@@ -55,7 +56,7 @@ const[changeInSupportedUsers,setChangeInSupportedUsers]=useState('')
             setProjectTimeline(thirdFormData.projectTimeline)
             setChangeInSupportedUsers(thirdFormData.changeInSupportedUsers)
         }
-    })
+    },[])
 
 
     //clear form data

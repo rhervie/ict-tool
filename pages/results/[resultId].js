@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import { useRouter } from 'next/router'
 import Results from '../../components/Result/Results'
+import Header from '../../components/Header/Header'
 
 
 const Result = () => {
@@ -22,6 +23,7 @@ const Result = () => {
    
   return (
    <div>
+   <Header />
     <Results result={result}/>
    </div>
   )
